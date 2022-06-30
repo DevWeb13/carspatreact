@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useState } from "react";
+
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Cars from "./pages/Cars/Cars";
+import Error from "./pages/Error/Error";
+import Header from "./components/Header/Header";
+import Nav from "./components/Nav/Nav";
 
 function App() {
+  const [active, setActive] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Header active={active} setActive={setActive} />
+        <Nav active={active} setActive={setActive} />
+        <Routes>
+          <Route path="/" element={<Home active={active} />}></Route>
+          <Route path="/a-propos" element={<About />}></Route>
+          <Route path="/cars" element={<Cars />}></Route>
+          <Route path="*" element={<Error />}></Route>
+        </Routes>
+        {/* <Footer /> */}
+      </BrowserRouter>
     </div>
   );
 }

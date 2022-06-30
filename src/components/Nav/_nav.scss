@@ -1,0 +1,33 @@
+.nav {
+  position: absolute;
+  // transform: translateX(-128px);
+  top: 80px;
+  left: -130px;
+  line-height: 50px;
+  color: $primaryColorLight;
+  display: flex;
+  width: $btMenuWidth;
+  height: 200px;
+  // align-items: center;
+  // justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.navActive {
+  transition: all 0.2s ease;
+  // transform: translateX(0);
+  top: 80px;
+  left: 40px;
+  z-index: 5;
+  width: calc(100vw - 40px);
+  height: calc(100vh - 80px);
+}
+
+.link:hover {
+  color: $primaryColor;
+}
+
+.activLink {
+  color: $primaryColor;
+  font-weight: bold;
+}
