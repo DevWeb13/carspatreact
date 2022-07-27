@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 
-import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
-import Cars from "./pages/Cars/Cars";
-import Error from "./pages/Error/Error";
-import Header from "./components/Header/Header";
-import Nav from "./components/Nav/Nav";
+import Home from "pages/Home/Home";
+import About from "pages/About/About";
+import Cars from "pages/Cars/Cars";
+import Error from "pages/Error/Error";
+import Header from "components/Header/Header";
+import Nav from "components/Nav/Nav";
 
 function App() {
   const [active, setActive] = useState(false);
