@@ -1,11 +1,7 @@
 import React from 'react';
 
-const Cars = () => {
-  return (
-    <div>
-      
-    </div>
-  );
-};
+function Cars() {
+  return <div />;
+}
 
 export default Cars;

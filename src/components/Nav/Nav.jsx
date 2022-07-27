@@ -1,16 +1,17 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { toggleMenu } from "utils/utils";
+import React from 'react';
+import propTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
+import toggleMenu from '../../utils/utils';
 
 function Nav({ active, setActive }) {
   return (
-    <nav className={active ? "nav navActive" : "nav"}>
+    <nav className={active ? 'nav navActive' : 'nav'}>
       <ul>
         <li>
           <NavLink
             to="/"
             onClick={() => toggleMenu(active, setActive)}
-            className={(nav) => (nav.isActive ? "activLink" : "link")}
+            className={(nav) => (nav.isActive ? 'activLink' : 'link')}
             tabIndex={active ? 0 : -1}
           >
             Home
@@ -20,7 +21,7 @@ function Nav({ active, setActive }) {
           <NavLink
             to="/about"
             onClick={() => toggleMenu(active, setActive)}
-            className={(nav) => (nav.isActive ? "activLink" : "link")}
+            className={(nav) => (nav.isActive ? 'activLink' : 'link')}
             tabIndex={active ? 0 : -1}
           >
             About
@@ -30,7 +31,7 @@ function Nav({ active, setActive }) {
           <NavLink
             to="/contact"
             onClick={() => toggleMenu(active, setActive)}
-            className={(nav) => (nav.isActive ? "activLink" : "link")}
+            className={(nav) => (nav.isActive ? 'activLink' : 'link')}
             tabIndex={active ? 0 : -1}
           >
             Contact
@@ -40,5 +41,10 @@ function Nav({ active, setActive }) {
     </nav>
   );
 }
+
+Nav.propTypes = {
+  active: propTypes.bool.isRequired,
+  setActive: propTypes.func.isRequired,
+};
 
 export default Nav;

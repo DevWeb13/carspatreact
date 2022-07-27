@@ -1,16 +1,30 @@
 $breakpoints: (
-    tablette: 700px,
-    desktop: 1000px
+  s: 576px,
+  m: 768px,
+  l: 992,
+  xl: 1200px,
 );
 
-@mixin tablette {
-    @media (min-width: map-get($breakpoints, tablette)) {
-        @content;
-    }
+@mixin s {
+  @media (min-width: map-get($breakpoints, s)) {
+    @content;
+  }
 }
 
-@mixin desktop {
-    @media (min-width: map-get($breakpoints, desktop)) {
-        @content;
-    }
+@mixin m {
+  @media (min-width: map-get($breakpoints, m)) {
+    @content;
+  }
+}
+
+@mixin l {
+  @media (min-width: map-get($breakpoints, l)) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: map-get($breakpoints, xl)) {
+    @content;
+  }
 }

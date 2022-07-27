@@ -1,6 +1,5 @@
 .nav {
   position: absolute;
-  // transform: translateX(-128px);
   top: 80px;
   left: -130px;
   line-height: 50px;
@@ -8,14 +7,11 @@
   display: flex;
   width: $btMenuWidth;
   height: 200px;
-  // align-items: center;
-  // justify-content: center;
   transition: all 0.2s ease;
 }
 
 .navActive {
   transition: all 0.2s ease;
-  // transform: translateX(0);
   top: 80px;
   left: 40px;
   z-index: 5;
@@ -30,4 +26,8 @@
 .activLink {
   color: $primaryColor;
   font-weight: bold;
+}
+
+/* ********************* >=576px ********************* */
+@include m {
 }

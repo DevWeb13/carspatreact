@@ -1,5 +1,3 @@
-function toggleMenu(active, setActive) {
+export default function toggleMenu(active, setActive) {
   setActive(!active);
 }
-
-export { toggleMenu };

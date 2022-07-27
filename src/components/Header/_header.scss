@@ -16,7 +16,7 @@
   }
 
   .btMenu:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -32,7 +32,7 @@
     position: relative;
     font-family: $birdsPolicy, sans-serif;
     font-size: 22px;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.96px;
     color: $primaryColor;
   }
 
@@ -52,13 +52,11 @@
   .logo {
     display: flex;
     align-items: center;
-    // margin-right: 1rem;
     .logoLink {
       height: 35px;
       img {
         width: 150px;
         height: auto;
-        // margin-right: 1rem;
       }
     }
   }
@@ -75,6 +73,17 @@
     }
     span {
       color: $primaryColorLight;
+      font-weight: bold;
+    }
+  }
+}
+
+/* ********************* >=576px ********************* */
+@include m {
+  .headerContainer {
+    height: $headerHeightSizeM;
+    .btMenu {
+      display: none;
     }
   }
 }
