@@ -7,7 +7,6 @@ function Home({ active }) {
       className={
         active ? 'homeContainer homeContainerDesactived' : 'homeContainer'
       }
-      // tabIndex={active ? 0 : -1}
     >
       <div className="cover" />
     </main>

@@ -22,11 +22,14 @@ function Header({ active, setActive }) {
           <polyline points="8 1 12 5 8 9" />
         </svg>
       </button>
-      <div className="logo">
-        <Link to="/" className="logoLink">
-          <img src="/assets/logoCarsPatShadowWhite.png" alt="logo" />
-        </Link>
-      </div>
+
+      <Link to="/">
+        <img
+          className="logoImg"
+          src="/assets/logoCarsPatShadowWhite.png"
+          alt="logo"
+        />
+      </Link>
       <Nav active={active} setActive={setActive} />
     </header>
   );

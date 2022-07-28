@@ -6,7 +6,7 @@ import toggleMenu from '../../utils/utils';
 function Nav({ active, setActive }) {
   return (
     <nav className={active ? 'nav navActive' : 'nav'}>
-      <ul>
+      <ul className="navUl">
         <li>
           <NavLink
             to="/"

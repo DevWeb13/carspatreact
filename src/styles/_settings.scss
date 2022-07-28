@@ -7,16 +7,20 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'birdsOfParadise', cursive, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 22px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 
 #root {
-  font-family: 'birdsOfParadise', cursive;
+  width: clamp(0px, 100vw, 1440px);
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
 }
 
 code {

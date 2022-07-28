@@ -5,15 +5,27 @@
   align-items: center;
   justify-content: center;
   height: calc(100vh - $headerHeight);
+  overflow: hidden;
 }
 
 .homeContainerDesactived {
   filter: blur(5px);
+  // disabled buttons
+  .button {
+    pointer-events: none;
+  }
 }
 
 .cover::after {
   content: url('../../../public/assets/porsche.png');
-  // width: 100%;
-  // height: 100%;
   z-index: -1;
+}
+
+@include m {
+  .homeContainer {
+    height: calc(100vh - $headerHeightSizeM);
+  }
+  .homeContainerDesactived {
+    filter: blur(0px);
+  }
 }
